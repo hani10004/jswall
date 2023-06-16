@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+li {
+    list-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+    height: 500vh;
+    background-color: #025464;
+}
+
+.world {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.world .stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+
+}
+
+.world .stage .house {
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: translateZ(-490vw);
+}
+
+.world .stage .wall {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.world .stage .wall-left{
+    width: 1000vw;
+    background-color: #f8f8f8;
+    transform:  rotateY(90deg) translateZ(-500vW)
+}
+.world .stage .wall-right{
+    width: 1000vw;
+    background-color: #f8f8f8;
+    transform:  rotateY(90deg) translateZ(-400vW)
+}
+
+.world .stage .wall-front {}
+
+.world .stage .wall-front.wall-front-a {
+    transform: translateZ(300vw);
+}
+.world .stage .wall-front.wall-front-b {
+    transform: translateZ(50vw);
+}
+.world .stage .wall-front.wall-front-c {
+    transform: translateZ(-200vw);
+
+}
+.world .stage .wall-front.wall-front-d {
+    transform: translateZ(-500vw);
+
+}
